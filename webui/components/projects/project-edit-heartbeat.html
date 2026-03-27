@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Project heartbeat settings</title>
+    <script type="module">
+        import { store } from "/components/projects/projects-store.js";
+    </script>
+</head>
+
+<body>
+    <div x-data>
+        <template x-if="$store.projects && $store.projects.selectedProject">
+            <div x-init="
+                if (!$store.projects.selectedProject.heartbeat) {
+                    $store.projects.selectedProject.heartbeat = { enabled: false, interval_seconds: 300, prompt: '' };
+                }
+            ">
+                <div class="projects-setting-row" style="padding: 1rem 0;">
+                    <div class="projects-setting-text">
+                        <label class="projects-form-label">Enable heartbeat</label>
+                        <span class="projects-form-description">When enabled, the heartbeat prompt will be sent to a
+                            dedicated chat session for this project at the configured interval. If a heartbeat is
+                            already running when the next one is due, it will be skipped.</span>
+                    </div>
+                    <div class="projects-setting-control">
+                        <label class="toggle">
+                            <input type="checkbox"
+                                x-model="$store.projects.selectedProject.heartbeat.enabled">
+                            <span class="toggler"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div x-show="$store.projects.selectedProject.heartbeat.enabled">
+                    <div class="projects-form-group">
+                        <label class="projects-form-label">Interval (seconds)</label>
+                        <span class="projects-form-description">How often the heartbeat should run, in seconds.
+                            Minimum is 30 seconds. The heartbeat chat session will be resumed on each tick.</span>
+                        <input type="number" class="projects-form-input"
+                            x-model.number="$store.projects.selectedProject.heartbeat.interval_seconds"
+                            min="30" step="1" placeholder="300">
+                    </div>
+
+                    <div class="projects-form-group">
+                        <label class="projects-form-label">Heartbeat prompt</label>
+                        <span class="projects-form-description">The markdown content that will be sent as a user
+                            message to the agent on each heartbeat. This is where you define what the agent should
+                            check or do on each heartbeat cycle. See
+                            <a href="https://github.com/digitalknk/openclaw-runbook/blob/main/examples/heartbeat-example.md"
+                                target="_blank">example</a>.
+                        </span>
+                        <textarea class="projects-form-textarea"
+                            x-model="$store.projects.selectedProject.heartbeat.prompt"
+                            rows="12"
+                            placeholder="# HEARTBEAT.md&#10;&#10;Describe what the agent should check or do on each heartbeat..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</body>
+<style>
+</style>
+
+</html>

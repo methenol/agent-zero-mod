@@ -28,6 +28,11 @@ class FileStructureInjectionSettings(TypedDict):
 class SubAgentSettings(TypedDict):
     enabled: bool
 
+class HeartbeatSettings(TypedDict):
+    enabled: bool
+    interval_seconds: int
+    prompt: str
+
 class BasicProjectData(TypedDict):
     title: str
     description: str
@@ -35,6 +40,7 @@ class BasicProjectData(TypedDict):
     color: str
     git_url: str
     file_structure: FileStructureInjectionSettings
+    heartbeat: HeartbeatSettings
 
 class GitStatusData(TypedDict, total=False):
     is_git_repo: bool
@@ -148,6 +154,14 @@ def _default_file_structure_settings():
     )
 
 
+def _default_heartbeat_settings():
+    return HeartbeatSettings(
+        enabled=False,
+        interval_seconds=300,
+        prompt="",
+    )
+
+
 def _normalizeBasicData(data: BasicProjectData) -> BasicProjectData:
     return {
         "title": data.get("title", ""),
@@ -158,6 +172,10 @@ def _normalizeBasicData(data: BasicProjectData) -> BasicProjectData:
         "file_structure": data.get(
             "file_structure",
             _default_file_structure_settings(),
+        ),
+        "heartbeat": data.get(
+            "heartbeat",
+            _default_heartbeat_settings(),
         ),
     }
 
@@ -178,6 +196,10 @@ def _normalizeEditData(data: EditProjectData) -> EditProjectData:
         "file_structure": data.get(
             "file_structure",
             _default_file_structure_settings(),
+        ),
+        "heartbeat": data.get(
+            "heartbeat",
+            _default_heartbeat_settings(),
         ),
         "subagents": data.get("subagents", {}),
     }
