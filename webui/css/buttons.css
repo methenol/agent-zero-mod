@@ -93,8 +93,8 @@
 }
 
 .btn-action-header.confirm:hover {
-  border-color: #4CAF50;
-  color: #4CAF50;
+  border-color: #9ece6a;
+  color: #9ece6a;
   background: var(--color-background);
 }
 
@@ -235,6 +235,6 @@
 }
 
 .btn-icon-action.danger:hover {
-  border-color: #e57373;
-  color: #e57373;
+  border-color: #f7768e;
+  color: #f7768e;
 }

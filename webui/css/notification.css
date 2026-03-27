@@ -45,8 +45,8 @@
 }
 
 .notification-toggle.has-unread {
-    border-color: #2196F3;
-    background: rgba(33, 150, 243, 0.1);
+    border-color: #7aa2f7;
+    background: rgba(122, 162, 247, 0.1);
     animation: pulse 2s infinite;
 }
 
@@ -54,7 +54,7 @@
     position: absolute;
     top: -8px;
     right: -8px;
-    background: #F44336;
+    background: #f7768e;
     color: white;
     font-size: 0.7rem;
     font-weight: bold;
@@ -99,8 +99,8 @@
 }
 
 .light-mode .notification-toggle.has-unread {
-    border-color: #2196F3;
-    background: rgba(33, 150, 243, 0.1);
+    border-color: #2959aa;
+    background: rgba(41, 89, 170, 0.1);
 }
 
 .light-mode .notification-toggle.disabled:hover {

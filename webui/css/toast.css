@@ -51,15 +51,15 @@
 }
 
 #toast.toast--success {
-  background-color: #4CAF50;
+  background-color: #3d5c1e;
 }
 
 #toast.toast--error {
-  background-color: #731811;
+  background-color: #6b2230;
 }
 
 #toast.toast--info {
-  background-color: #2196F3;
+  background-color: #253e6d;
 }
 
 .toast__close,

@@ -1,6 +1,6 @@
 body {
-    background-color: #131313;
-    color: #d4d4d4;
+    background-color: #1a1b26;
+    color: #a9b1d6;
     font-family: "Rubik", Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 }
 
 .login-form {
-    background-color: #1a1a1a;
+    background-color: #16161e;
     padding: 2rem;
     border-radius: 1.125rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -45,16 +45,16 @@ h2 {
 .input-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #737a81;
+    color: #787c99;
 }
 
 .input-group input {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #444444a8;
+    border: 1px solid #29355aa8;
     border-radius: 0.5rem;
-    background-color: #131313;
-    color: #d4d4d4;
+    background-color: #14141b;
+    color: #a9b1d6;
     font-size: 1rem;
     box-sizing: border-box; /* Added for consistent padding */
 }
@@ -64,7 +64,7 @@ button {
     padding: 0.75rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: #4248f1;
+    background-color: #3d59a1;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -72,10 +72,10 @@ button {
 }
 
 button:hover {
-    background-color: #353bc5;
+    background-color: #2e4480;
 }
 
 .error {
-    color: #cf6679;
+    color: #f7768e;
     margin-top: 1rem;
 }

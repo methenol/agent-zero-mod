@@ -3,19 +3,19 @@
 /* Only apply hover effects on devices that support hover */
 @media (hover: hover) {
   #microphone-button:hover {
-    background-color: #636363;
+    background-color: #3b4261;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
       0 6px 14px rgba(0, 0, 0, 0.18);
   }
 }
 
 #microphone-button:active {
-  background-color: #444444;
+  background-color: #292e42;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
 }
 
 #microphone-button.recording {
-  background-color: #ff4136; /* Red color for recording */
+  background-color: #8c4351; /* Red color for recording */
   transition: background-color 0.3s ease;
 }
 

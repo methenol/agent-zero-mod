@@ -16,27 +16,27 @@
 }
 
 .scheduler-status-idle {
-  background-color: rgba(0, 100, 0, 0.2);
-  color: #2a9d8f;
-  border: 1px solid rgba(42, 157, 143, 0.3);
+  background-color: rgba(115, 218, 202, 0.15);
+  color: #73daca;
+  border: 1px solid rgba(115, 218, 202, 0.25);
 }
 
 .scheduler-status-running {
-  background-color: rgba(0, 60, 120, 0.2);
-  color: #4361ee;
-  border: 1px solid rgba(67, 97, 238, 0.3);
+  background-color: rgba(122, 162, 247, 0.15);
+  color: #7aa2f7;
+  border: 1px solid rgba(122, 162, 247, 0.25);
 }
 
 .scheduler-status-disabled {
-  background-color: rgba(70, 70, 70, 0.2);
-  color: #6c757d;
-  border: 1px solid rgba(108, 117, 125, 0.3);
+  background-color: rgba(120, 124, 153, 0.15);
+  color: #787c99;
+  border: 1px solid rgba(120, 124, 153, 0.25);
 }
 
 .scheduler-status-error {
-  background-color: rgba(120, 0, 0, 0.2);
-  color: #e63946;
-  border: 1px solid rgba(230, 57, 70, 0.3);
+  background-color: rgba(247, 118, 142, 0.15);
+  color: #f7768e;
+  border: 1px solid rgba(247, 118, 142, 0.25);
 }
 
 .scheduler-status-badge-small {
@@ -58,22 +58,22 @@
 /* Light mode status badges */
 .light-mode .scheduler-status-idle {
   background-color: rgba(42, 157, 143, 0.1);
-  color: #1a6f65;
+  color: #33635c;
 }
 
 .light-mode .scheduler-status-running {
   background-color: rgba(67, 97, 238, 0.1);
-  color: #2540b3;
+  color: #2959aa;
 }
 
 .light-mode .scheduler-status-disabled {
   background-color: rgba(108, 117, 125, 0.1);
-  color: #495057;
+  color: #707280;
 }
 
 .light-mode .scheduler-status-error {
   background-color: rgba(230, 57, 70, 0.1);
-  color: #c5283d;
+  color: #8c4351;
 }
 
 .light-mode .scheduler-status-selected {
@@ -582,8 +582,8 @@
 }
 
 .light-mode .scheduler-todo-remove:hover {
-  background-color: #e0e0e0;
-  color: #d32f2f;
+  background-color: #dcdee3;
+  color: #8c4351;
 }
 
 /* ==========================================================================

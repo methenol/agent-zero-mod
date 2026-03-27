@@ -8,49 +8,52 @@
 }
 
 :root {
-  /* Dark mode */
-  --color-background-dark: #131313;
-  --color-text-dark: #ffffff;
-  --color-text-muted-dark: #d4d4d4e4;
-  --color-primary-dark: #737a81;
-  --color-secondary-dark: #656565;
-  --color-accent-dark: #cf6679;
-  --color-message-bg-dark: #2d2d2d;
-  --color-highlight-dark: #2b5ab9;
-  --color-message-text-dark: #e0e0e0;
-  --color-panel-dark: #1a1a1a;
-  --color-border-dark: #444444a8;
-  --color-input-dark: #131313;
-  --color-input-focus-dark: #101010;
-  --color-chat-background-dark: #212121;
-  --color-error-text-dark:#e72323;
-  --color-warning-text-dark:#e79c23;
-  --color-table-row-dark: #272727;
+  /* Dark mode - Tokyo Night */
+  --color-background-dark: #1a1b26;
+  --color-text-dark: #c0caf5;
+  --color-text-muted-dark: #a9b1d6;
+  --color-text-secondary-dark: #c0caf5b3;
+  --color-primary-dark: #787c99;
+  --color-secondary-dark: #292e42;
+  --color-accent-dark: #bb9af7;
+  --color-message-bg-dark: #1e202e;
+  --color-highlight-dark: #3d59a1;
+  --color-message-text-dark: #a9b1d6;
+  --color-panel-dark: #16161e;
+  --color-border-dark: #29355aa8;
+  --color-input-dark: #14141b;
+  --color-input-focus-dark: #0f0f14;
+  --color-chat-background-dark: #1a1b26;
+  --color-error-text-dark: #f7768e;
+  --color-warning-text-dark: #e0af68;
+  --color-table-row-dark: #1e202e;
 
-  /* Light mode */
-  --color-background-light: #fafafa;
-  --color-text-light: #333333;
-  --color-text-muted-light: #333333e4;
-  --color-primary-light: #384653;
-  --color-secondary-light: #e8eaf6;
-  --color-accent-light: #b00020;
-  --color-message-bg-light: #ffffff;
-  --color-highlight-light: #2563eb;
-  --color-message-text-light: #333333;
-  --color-panel-light: #f0f0f0;
-  --color-border-light: #bdbdbdcf;
-  --color-input-light: #e4e4e4;
-  --color-input-focus-light: #dadada;
-  --color-chat-background-light: #fafafa;
-  --color-error-text-light:#920000;
-  --color-warning-text-light:#936214;
-  --color-table-row-light: #edededf3;
+  /* Light mode - Tokyo Night Light */
+  --color-background-light: #e6e7ed;
+  --color-text-light: #343b59;
+  --color-text-muted-light: #707280e4;
+  --color-text-secondary-light: #343b59b3;
+  --color-primary-light: #7d7f8f;
+  --color-secondary-light: #d6d8df;
+  --color-accent-light: #2959aa;
+  --color-message-bg-light: #dcdee3;
+  --color-highlight-light: #2959aa;
+  --color-message-text-light: #343b59;
+  --color-panel-light: #d6d8df;
+  --color-border-light: #c1c2c7cf;
+  --color-input-light: #e6e7ed;
+  --color-input-focus-light: #dcdee3;
+  --color-chat-background-light: #e6e7ed;
+  --color-error-text-light: #942f2f;
+  --color-warning-text-light: #8f5e15;
+  --color-table-row-light: #dcdee3f3;
 
 
   /* Default to dark mode */
   --color-background: var(--color-background-dark);
   --color-text: var(--color-text-dark);
   --color-text-muted: var(--color-text-muted-dark);
+  --color-text-secondary: var(--color-text-secondary-dark);
   --color-primary: var(--color-primary-dark);
   --color-secondary: var(--color-secondary-dark);
   --color-accent: var(--color-accent-dark);
@@ -90,8 +93,8 @@
   --border-radius-sm: 0.5rem;
   --transition-speed: 0.3s;
   --svg-filter: brightness(0) saturate(100%) var(--color-primary-filter);
-  --color-primary-filter: invert(73%) sepia(17%) saturate(360%)
-    hue-rotate(177deg) brightness(87%) contrast(85%);
+  --color-primary-filter: invert(52%) sepia(16%) saturate(581%)
+    hue-rotate(199deg) brightness(88%) contrast(89%);
 }
 
 /* Light mode class */
@@ -99,10 +102,12 @@
   --color-background: var(--color-background-light);
   --color-text: var(--color-text-light);
   --color-text-muted: var(--color-text-muted-light);
+  --color-text-secondary: var(--color-text-secondary-light);
   --color-primary: var(--color-primary-light);
   --color-secondary: var(--color-secondary-light);
   --color-accent: var(--color-accent-light);
   --color-message-bg: var(--color-message-bg-light);
+  --color-highlight: var(--color-highlight-light);
   --color-message-text: var(--color-message-text-light);
   --color-panel: var(--color-panel-light);
   --color-border: var(--color-border-light);
@@ -110,8 +115,8 @@
   --color-input-focus: var(--color-input-focus-light);
   --color-background-hover: color-mix(in srgb, var(--color-border) 50%, transparent);
   --color-chat-background: var(--color-chat-background-light);
-  --color-error-text:var(--color-error-text-light);
-  --color-warning-text:var(--color-warning-text-light);
+  --color-error-text: var(--color-error-text-light);
+  --color-warning-text: var(--color-warning-text-light);
   --color-table-row: var(--color-table-row-light);
 } 
 
@@ -945,8 +950,8 @@ h4 {
 }
 
 .slider {
-  background-color: #272727;
-  border: 1px solid #535353;
+  background-color: #292e42;
+  border: 1px solid #3b4261;
   border-radius: 1.15rem;
   bottom: 0;
   cursor: pointer;
@@ -959,7 +964,7 @@ h4 {
 }
 
 .slider:before {
-  background-color: #b6b6b6;
+  background-color: #787c99;
   border-radius: 50%;
   bottom: 0.134rem;
   content: "";
@@ -972,7 +977,7 @@ h4 {
 }
 
 input:checked + .slider {
-  background-color: #3a3a3a;
+  background-color: #3d59a1;
 }
 
 input:checked + .slider:before {
@@ -1003,11 +1008,11 @@ input:checked + .slider:before {
 }
 
 .connected {
-  color: #00c340;
+  color: #9ece6a;
 }
 
 .disconnected {
-  color: #e40138;
+  color: #f7768e;
 }
 
 .heartbeat {
@@ -1150,24 +1155,24 @@ a:active {
 
 
 .light-mode .connected {
-  color: #4caf50;
+  color: #33635c;
 }
 
 .light-mode .disconnected {
-  color: #f44336;
+  color: #8c4351;
 }
 
 .light-mode .slider {
-  background-color: #f1f1f1;
-  border: 1px solid #dddddd;
+  background-color: #dcdee3;
+  border: 1px solid #c1c2c7;
 }
 
 .light-mode .slider:before {
-  background-color: #838383;
+  background-color: #7d7f8f;
 }
 
 .light-mode input:checked + .slider {
-  background-color: #e6e6e6;
+  background-color: #b8cde8;
 }
 
 .light-mode .extension {

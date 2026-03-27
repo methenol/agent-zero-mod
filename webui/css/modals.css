@@ -253,7 +253,7 @@ some classes like modal-header are shared between the old and the new system */
   padding: 0.2em 0.4em;
 }
 .btn.primary {
-  background: #2196f3;
+  background: #3d59a1;
   color: white;
   width: fit-content;
 }
@@ -261,7 +261,7 @@ some classes like modal-header are shared between the old and the new system */
   cursor: not-allowed;
 }
 .btn-ok {
-  background: #4248f1;
+  background: #3d59a1;
   color: white;
   display: inline-flex;
   align-items: center;
@@ -272,10 +272,10 @@ some classes like modal-header are shared between the old and the new system */
   max-width: 20px;
 }
 .btn-ok:hover {
-  background: #353bc5;
+  background: #2e4480;
 }
 .btn-ok:active {
-  background: #2b309c;
+  background: #1f3366;
 }
 .btn-cancel {
   background: transparent;
@@ -288,7 +288,7 @@ some classes like modal-header are shared between the old and the new system */
   color: var(--color-text);
 }
 .btn-cancel:active {
-  background: #a94658;
+  background: #8c4351;
   color: var(--color-text);
 }
 .light-mode .btn-cancel:hover {
@@ -296,11 +296,11 @@ some classes like modal-header are shared between the old and the new system */
   color: var(--color-background);
 }
 .light-mode .btn-cancel:active {
-  background: #a94658;
+  background: #8c4351;
   color: var(--color-background);
 }
 .btn-field {
-  background: #2196f3;
+  background: #3d59a1;
   color: white;
   width: fit-content;
 }

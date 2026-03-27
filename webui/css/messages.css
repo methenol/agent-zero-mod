@@ -110,7 +110,7 @@
 .message-info,
 .message-util,
 .message-warning {
-  color: #e0e0e0;
+  color: #a9b1d6;
   background-color: transparent;
   border-radius: 0;
   box-shadow: none;
@@ -144,8 +144,8 @@
 
 /* Terminal-style code execution block */
 .message-code-exe .message-body {
-  background: #0d1117;
-  border: 1px solid rgba(48, 54, 61, 0.8);
+  background: #16161e;
+  border: 1px solid rgba(41, 53, 90, 0.8);
   border-radius: 6px;
   padding: 0;
   margin-top: 0.5em;
@@ -153,9 +153,9 @@
 }
 
 .message-code-exe .msg-heading {
-  background: linear-gradient(180deg, #21262d 0%, #161b22 100%);
+  background: linear-gradient(180deg, #1a1b26 0%, #16161e 100%);
   padding: 6px 12px;
-  border-bottom: 1px solid rgba(48, 54, 61, 0.8);
+  border-bottom: 1px solid rgba(41, 53, 90, 0.8);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -164,7 +164,7 @@
 .message-code-exe .msg-heading h4 {
   font-family: var(--font-family-code);
   font-size: 0.75rem;
-  color: #8b949e;
+  color: #787c99;
   margin: 0;
   display: flex;
   align-items: center;
@@ -173,7 +173,7 @@
 
 .message-code-exe .msg-heading h4::before {
   content: "$";
-  color: #7ee787;
+  color: #73daca;
   font-weight: 600;
 }
 
@@ -181,7 +181,7 @@
   padding: 12px;
   font-family: var(--font-family-code);
   font-size: 0.72rem;
-  color: #c9d1d9;
+  color: #a9b1d6;
   line-height: 1.5;
   max-height: 300px;
   overflow-y: auto;
@@ -193,27 +193,27 @@
   word-break: break-word;
 }
 
-/* Light mode terminal */
+/* Light mode terminal - Tokyo Night Light */
 .light-mode .message-code-exe .message-body {
-  background: #f6f8fa;
-  border-color: #d0d7de;
+  background: #e6e7ed;
+  border-color: #c1c2c7;
 }
 
 .light-mode .message-code-exe .msg-heading {
-  background: linear-gradient(180deg, #f6f8fa 0%, #eaeef2 100%);
-  border-bottom-color: #d0d7de;
+  background: linear-gradient(180deg, #e6e7ed 0%, #dcdee3 100%);
+  border-bottom-color: #c1c2c7;
 }
 
 .light-mode .message-code-exe .msg-heading h4 {
-  color: #57606a;
+  color: #707280;
 }
 
 .light-mode .message-code-exe .msg-heading h4::before {
-  color: #1a7f37;
+  color: #33635c;
 }
 
 .light-mode .message-code-exe .msg-content {
-  color: #24292f;
+  color: #343b59;
 }
 
 .message-body .markdown-block-wrap {
@@ -520,7 +520,7 @@
 }
 
 .light-mode .message-user {
-  color: #4e4e4e;
+  color: #343b59;
 }
 
 /* Markdown in messages */
