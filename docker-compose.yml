@@ -1,0 +1,59 @@
+###############################################################################
+# docker-compose.yml — Agent Zero with Docker-in-Docker
+#
+# Usage:
+#   docker compose build
+#   docker compose up -d
+#   Open http://localhost:50080 to access the Agent Zero Web UI
+#
+# The container runs in privileged mode so that the nested Docker daemon
+# can manage cgroups, namespaces, and networking.  A named volume persists
+# the inner Docker's image/layer cache across restarts.
+###############################################################################
+
+services:
+  agent-zero-dind:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agent-zero-dind
+    hostname: agent-zero-dind
+
+    # ── Privileged mode is required for Docker-in-Docker ─────────────────────
+    privileged: true
+
+    # ── Ports ────────────────────────────────────────────────────────────────
+    ports:
+      - "50001:80"       # Agent Zero Web UI
+      - "50022:22"       # SSH access (used by A0 code-execution tool)
+
+    # ── Volumes ──────────────────────────────────────────────────────────────
+    volumes:
+      # Persist Agent Zero user data (settings, memory, projects, logs)
+      - ./a0-data:/a0/usr
+
+      # Persist the inner Docker daemon's images & layers across restarts.
+      # Without this, every restart re-pulls images the agent created.
+      - docker-data:/var/lib/docker
+
+    # ── Environment ──────────────────────────────────────────────────────────
+    environment:
+      # Make the Docker socket path explicit for any tools that look for it
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      # Uncomment and set these to pre-configure Agent Zero on first launch:
+      # - A0_SET_chat_model_provider=openai
+      # - A0_SET_chat_model_name=gpt-4o
+      # - A0_SET_chat_model_api_key=sk-...
+
+    # ── Resource hints (adjust for your machine) ─────────────────────────────
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: "4"
+    #       memory: 8G
+
+    restart: unless-stopped
+
+volumes:
+  docker-data:
+    driver: local
